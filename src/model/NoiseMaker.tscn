@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://be836v42rrrvq"]
+
+[ext_resource type="Script" path="res://src/model/NoiseMaker.gd" id="1_8vlfq"]
+[ext_resource type="Texture2D" uid="uid://ddoaup73kwkfb" path="res://assets/entities/botella_rota.png" id="1_b8xjy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aurpv"]
+radius = 6.0
+height = 36.34
+
+[node name="NoiseMaker" type="Area2D"]
+scale = Vector2(2, 2)
+collision_layer = 2
+script = ExtResource("1_8vlfq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+rotation = 0.76969
+shape = SubResource("CapsuleShape2D_aurpv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_b8xjy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

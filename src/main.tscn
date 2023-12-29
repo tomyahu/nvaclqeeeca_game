@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8yf72v5uvggt"]
+
+[ext_resource type="Script" path="res://src/main.gd" id="1_rxrnq"]
+[ext_resource type="PackedScene" uid="uid://n1rab8nxkj1t" path="res://src/menues/Chat.tscn" id="1_vsocr"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_rxrnq")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BottomBar" type="Control" parent="UI"]
+anchors_preset = 0
+offset_top = 640.0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="ColorRect" type="ColorRect" parent="UI/BottomBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -280.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.152941, 0.160784, 0.196078, 1)
+
+[node name="Chat" type="Control" parent="UI"]
+anchors_preset = 0
+offset_left = 1000.0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="Chat" parent="UI/Chat" instance=ExtResource("1_vsocr")]
+z_index = 10
+layout_mode = 1
+offset_left = 8.0
+offset_top = 6.0
+offset_right = -8.0
+offset_bottom = -6.0
+
+[node name="ColorRect" type="ColorRect" parent="UI/Chat"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.152941, 0.160784, 0.196078, 1)
+
+[node name="ReferenceRect" type="ReferenceRect" parent="UI/Chat"]
+z_index = 15
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(0.937255, 0.341176, 0.341176, 1)
+border_width = 4.0
+editor_only = false
+
+[node name="Scene" type="Node" parent="."]

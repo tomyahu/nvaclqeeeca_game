@@ -1,0 +1,108 @@
+[gd_scene load_steps=9 format=3 uid="uid://blah4etqvl0d1"]
+
+[ext_resource type="Script" path="res://src/menues/Gameover.gd" id="1_xsg6w"]
+[ext_resource type="Shader" path="res://src/menues/Gameover.gdshader" id="2_aihsw"]
+[ext_resource type="LabelSettings" uid="uid://cq8x7g8vr6lrb" path="res://src/menues/Tres/GameoverOptionLabel.tres" id="2_l4bca"]
+[ext_resource type="Texture2D" uid="uid://dxcrcg0u7per1" path="res://assets/ui/drex_distressed.png" id="3_shsqa"]
+[ext_resource type="Script" path="res://src/menues/Retry.gd" id="4_abe54"]
+[ext_resource type="Texture2D" uid="uid://ctsbstokm7fh5" path="res://assets/ui/no_cam.png" id="4_vq4ra"]
+[ext_resource type="Script" path="res://src/menues/Exit.gd" id="5_u1guo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_678k1"]
+shader = ExtResource("2_aihsw")
+
+[node name="Gameover" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xsg6w")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+material = SubResource("ShaderMaterial_678k1")
+layout_mode = 0
+offset_right = 1000.0
+offset_bottom = 640.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(500, 300)
+scale = Vector2(3, 3)
+texture = ExtResource("3_shsqa")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(0, 34)
+texture = ExtResource("4_vq4ra")
+
+[node name="Options" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 160.0
+offset_right = 1000.0
+offset_bottom = 800.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Retry" type="Label" parent="Options"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.5
+offset_top = -17.5
+offset_right = 42.5
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Retry"
+label_settings = ExtResource("2_l4bca")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_abe54")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Options/Retry"]
+layout_mode = 0
+offset_left = -14.0
+offset_top = -7.0
+offset_right = 142.0
+offset_bottom = 59.0
+border_color = Color(1, 1, 1, 1)
+border_width = 3.0
+editor_only = false
+
+[node name="Exit" type="Label" parent="Options"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = 49.0
+offset_right = 43.5
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit
+"
+label_settings = ExtResource("2_l4bca")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_u1guo")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Options/Exit"]
+visible = false
+layout_mode = 0
+offset_left = -33.5
+offset_top = -7.0
+offset_right = 122.5
+offset_bottom = 59.0
+border_color = Color(1, 1, 1, 1)
+border_width = 3.0
+editor_only = false

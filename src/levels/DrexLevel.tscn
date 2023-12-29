@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://caw3rm3ne3s38"]
+
+[ext_resource type="PackedScene" uid="uid://dnl5uxluxmt1s" path="res://src/levels/Level.tscn" id="1_0sp3x"]
+[ext_resource type="Script" path="res://src/levels/DrexLevel.gd" id="2_gm6mw"]
+[ext_resource type="Texture2D" uid="uid://bim66v6fdcj8w" path="res://assets/entities/peluche_con_humita.png" id="2_r42f4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyqom"]
+size = Vector2(32, 32)
+
+[node name="Level" instance=ExtResource("1_0sp3x")]
+script = ExtResource("2_gm6mw")
+
+[node name="VictoryArea" type="Area2D" parent="." index="5"]
+position = Vector2(600, 50)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VictoryArea" index="0"]
+shape = SubResource("RectangleShape2D_gyqom")
+
+[node name="Sprite2D" type="Sprite2D" parent="VictoryArea" index="1"]
+texture_filter = 1
+position = Vector2(-3.5, 0)
+texture = ExtResource("2_r42f4")
+
+[node name="Tilemap" parent="." index="9"]
+texture_filter = 1
+
+[connection signal="body_entered" from="VictoryArea" to="." method="_on_victory_area_body_entered"]

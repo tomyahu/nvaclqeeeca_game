@@ -1,0 +1,165 @@
+[gd_scene load_steps=4 format=3 uid="uid://uirjek5ahln2"]
+
+[ext_resource type="PackedScene" uid="uid://caw3rm3ne3s38" path="res://src/levels/DrexLevel.tscn" id="1_qsgwo"]
+[ext_resource type="PackedScene" uid="uid://be836v42rrrvq" path="res://src/model/NoiseMaker.tscn" id="2_7dab2"]
+[ext_resource type="PackedScene" uid="uid://dlntnuxbxb2ti" path="res://src/model/noise_maker_2x2.tscn" id="3_1egm3"]
+
+[node name="Level" instance=ExtResource("1_qsgwo")]
+total_time = 30
+
+[node name="Player" parent="." index="2"]
+position = Vector2(32, 32)
+
+[node name="NoiseMaker" parent="NoiseMakers" index="0" instance=ExtResource("2_7dab2")]
+position = Vector2(110, 26)
+
+[node name="NoiseMaker2" parent="NoiseMakers" index="1" instance=ExtResource("2_7dab2")]
+position = Vector2(136, 82)
+
+[node name="NoiseMaker12" parent="NoiseMakers" index="2" instance=ExtResource("2_7dab2")]
+position = Vector2(479, 22)
+
+[node name="NoiseMaker13" parent="NoiseMakers" index="3" instance=ExtResource("2_7dab2")]
+position = Vector2(506, 77)
+
+[node name="NoiseMaker14" parent="NoiseMakers" index="4" instance=ExtResource("2_7dab2")]
+position = Vector2(456, 76)
+
+[node name="NoiseMaker15" parent="NoiseMakers" index="5" instance=ExtResource("2_7dab2")]
+position = Vector2(546, 18)
+
+[node name="NoiseMaker16" parent="NoiseMakers" index="6" instance=ExtResource("2_7dab2")]
+position = Vector2(630, 23)
+
+[node name="NoiseMaker17" parent="NoiseMakers" index="7" instance=ExtResource("2_7dab2")]
+position = Vector2(668, 50)
+
+[node name="NoiseMaker22" parent="NoiseMakers" index="8" instance=ExtResource("2_7dab2")]
+position = Vector2(347, 110)
+
+[node name="NoiseMaker24" parent="NoiseMakers" index="9" instance=ExtResource("2_7dab2")]
+position = Vector2(386, 201)
+
+[node name="NoiseMaker29" parent="NoiseMakers" index="10" instance=ExtResource("2_7dab2")]
+position = Vector2(507, 125)
+
+[node name="NoiseMaker30" parent="NoiseMakers" index="11" instance=ExtResource("2_7dab2")]
+position = Vector2(547, 159)
+
+[node name="NoiseMaker31" parent="NoiseMakers" index="12" instance=ExtResource("2_7dab2")]
+position = Vector2(529, 221)
+
+[node name="NoiseMaker34" parent="NoiseMakers" index="13" instance=ExtResource("2_7dab2")]
+position = Vector2(626, 195)
+
+[node name="NoiseMaker35" parent="NoiseMakers" index="14" instance=ExtResource("2_7dab2")]
+position = Vector2(677, 187)
+
+[node name="NoiseMaker42" parent="NoiseMakers" index="15" instance=ExtResource("2_7dab2")]
+position = Vector2(571, 406)
+
+[node name="NoiseMaker43" parent="NoiseMakers" index="16" instance=ExtResource("2_7dab2")]
+position = Vector2(542, 360)
+
+[node name="NoiseMaker44" parent="NoiseMakers" index="17" instance=ExtResource("2_7dab2")]
+position = Vector2(323, 340)
+
+[node name="NoiseMaker49" parent="NoiseMakers" index="18" instance=ExtResource("2_7dab2")]
+position = Vector2(267, 301)
+
+[node name="NoiseMaker54" parent="NoiseMakers" index="19" instance=ExtResource("2_7dab2")]
+position = Vector2(212, 452)
+
+[node name="NoiseMaker56" parent="NoiseMakers" index="20" instance=ExtResource("2_7dab2")]
+position = Vector2(283, 481)
+
+[node name="NoiseMaker70" parent="NoiseMakers" index="21" instance=ExtResource("2_7dab2")]
+position = Vector2(446, 507)
+
+[node name="NoiseMaker71" parent="NoiseMakers" index="22" instance=ExtResource("2_7dab2")]
+position = Vector2(467, 555)
+
+[node name="NoiseMaker75" parent="NoiseMakers" index="23" instance=ExtResource("2_7dab2")]
+position = Vector2(536, 548)
+
+[node name="NoiseMaker87" parent="NoiseMakers" index="24" instance=ExtResource("2_7dab2")]
+position = Vector2(714, 536)
+
+[node name="NoiseMaker99" parent="NoiseMakers" index="25" instance=ExtResource("2_7dab2")]
+position = Vector2(804, 301)
+
+[node name="NoiseMaker100" parent="NoiseMakers" index="26" instance=ExtResource("2_7dab2")]
+position = Vector2(881, 313)
+
+[node name="NoiseMaker101" parent="NoiseMakers" index="27" instance=ExtResource("2_7dab2")]
+position = Vector2(864, 383)
+
+[node name="NoiseMaker102" parent="NoiseMakers" index="28" instance=ExtResource("2_7dab2")]
+position = Vector2(868, 234)
+
+[node name="NoiseMaker111" parent="NoiseMakers" index="29" instance=ExtResource("2_7dab2")]
+position = Vector2(848, 31)
+
+[node name="NoiseMaker91" parent="NoiseMakers" index="30" instance=ExtResource("2_7dab2")]
+position = Vector2(786, 580)
+
+[node name="NoiseMaker95" parent="NoiseMakers" index="31" instance=ExtResource("2_7dab2")]
+position = Vector2(967, 553)
+
+[node name="NoiseMaker19" parent="NoiseMakers" index="32" instance=ExtResource("2_7dab2")]
+position = Vector2(717, 27)
+
+[node name="NoiseMaker5" parent="NoiseMakers" index="33" instance=ExtResource("2_7dab2")]
+position = Vector2(119, 220)
+
+[node name="NoiseMaker7" parent="NoiseMakers" index="34" instance=ExtResource("2_7dab2")]
+position = Vector2(191, 201)
+
+[node name="NoiseMaker4" parent="NoiseMakers" index="35" instance=ExtResource("3_1egm3")]
+position = Vector2(54, 235)
+collision_layer = 1
+
+[node name="NoiseMaker8" parent="NoiseMakers" index="36" instance=ExtResource("3_1egm3")]
+position = Vector2(372, 32)
+collision_layer = 1
+
+[node name="NoiseMaker3" parent="NoiseMakers" index="37" instance=ExtResource("3_1egm3")]
+position = Vector2(238, 361)
+
+[node name="NoiseMaker6" parent="NoiseMakers" index="38" instance=ExtResource("3_1egm3")]
+position = Vector2(362, 497)
+
+[node name="NoiseMaker9" parent="NoiseMakers" index="39" instance=ExtResource("3_1egm3")]
+position = Vector2(694, 585)
+
+[node name="NoiseMaker10" parent="NoiseMakers" index="40" instance=ExtResource("3_1egm3")]
+position = Vector2(578, 261)
+
+[node name="NoiseMaker11" parent="NoiseMakers" index="41" instance=ExtResource("3_1egm3")]
+position = Vector2(265, 581)
+
+[node name="NoiseMaker20" parent="NoiseMakers" index="42" instance=ExtResource("3_1egm3")]
+position = Vector2(941, 582)
+
+[node name="NoiseMaker18" parent="NoiseMakers" index="43" instance=ExtResource("3_1egm3")]
+position = Vector2(737, 210)
+
+[node name="NoiseMaker21" parent="NoiseMakers" index="44" instance=ExtResource("3_1egm3")]
+position = Vector2(927, 36)
+
+[node name="NoiseIndex" parent="." index="4"]
+z_index = 0
+
+[node name="VictoryArea" parent="." index="5"]
+position = Vector2(581, 67)
+
+[node name="Chat" parent="UI/Chat" index="0"]
+offset_bottom = 0.0
+chat_speed = 5
+
+[node name="ReferenceRect" parent="UI/Chat" index="2"]
+z_index = 0
+
+[node name="Tilemap" parent="." index="9"]
+z_index = -1
+layer_0/tile_data = PackedInt32Array(3, 327680, 0, 4, 327680, 0, 65540, 65536, 0, 65539, 65536, 0, 65538, 196608, 1, 2, 131072, 1, -65534, 196608, 0, -65533, 65536, 2, -65532, 65536, 2, 5, 0, 1, 65541, 262144, 1, -65531, 262144, 0, 589829, 327680, 0, 589830, 327680, 0, 655366, 65536, 0, 655365, 65536, 0, 655364, 196608, 1, 589828, 131072, 1, 524292, 196608, 0, 524293, 65536, 2, 524294, 65536, 2, 589831, 327680, 0, 655367, 65536, 0, 524295, 65536, 2, 589832, 327680, 0, 655368, 65536, 0, 524296, 65536, 2, 589833, 327680, 0, 655369, 65536, 0, 524297, 65536, 2, 589834, 0, 1, 655370, 262144, 1, 524298, 262144, 0, 327680, 327680, 0, 327681, 327680, 0, 393217, 327680, 0, 393216, 327680, 0, 458751, 131072, 1, 393215, 131072, 1, 327679, 131072, 1, 262144, 327680, 0, 262145, 327680, 0, 327682, 327680, 0, 393218, 327680, 0, 262146, 327680, 0, 327683, 0, 1, 393219, 0, 1, 262147, 0, 1, 458755, 0, 1, 458754, 327680, 0, 458753, 327680, 0, 524291, 0, 1, 524290, 327680, 0, 524289, 327680, 0, 589827, 0, 1, 589826, 327680, 0, 589825, 327680, 0, 655363, 262144, 1, 655362, 65536, 0, 655361, 65536, 0, 655360, 65536, 0, 589824, 327680, 0, 524288, 327680, 0, 720895, 196608, 1, 655359, 131072, 1, 589823, 131072, 1, 524287, 131072, 1, 458752, 327680, 0, 262143, 196608, 0, 196608, 65536, 2, 196609, 65536, 2, 196610, 65536, 2, 196611, 262144, 0)

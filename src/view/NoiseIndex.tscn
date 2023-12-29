@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpioa33mp4oej"]
+
+[ext_resource type="Script" path="res://src/view/NoiseIndex.gd" id="1_bhwqu"]
+[ext_resource type="Texture2D" uid="uid://dsm7j21wwo2dw" path="res://assets/ui/cronometro.png" id="2_tueww"]
+[ext_resource type="FontFile" uid="uid://bmo2685x0crmo" path="res://assets/fonts/ChevyRay - Classified.ttf" id="3_yukbn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_byuet"]
+font = ExtResource("3_yukbn")
+font_color = Color(1, 0.701961, 0.701961, 1)
+
+[node name="NoiseIndex" type="Node2D"]
+script = ExtResource("1_bhwqu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_tueww")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.0
+offset_top = -6.0
+offset_right = 19.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_byuet")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="TimeLeftTimer" type="Timer" parent="."]
+wait_time = 30.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="TimeLeftTimer" to="." method="_on_time_left_timer_timeout"]

@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cq8x7g8vr6lrb"]
+
+[ext_resource type="FontFile" uid="uid://uhyj7da0d3i8" path="res://assets/fonts/ChevyRay - Lantern.ttf" id="1_riqfk"]
+
+[resource]
+font = ExtResource("1_riqfk")
+font_size = 48
